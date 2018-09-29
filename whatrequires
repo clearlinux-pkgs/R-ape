@@ -1,3 +1,11 @@
 # This file contains recursive sources that require this package
+R-RNeXML
+R-adegenet
+R-adephylo
 R-clue
+R-geiger
+R-phangorn
 R-phylogram
+R-phytools
+R-rotl
+R-taxize
