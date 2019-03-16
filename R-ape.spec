@@ -4,14 +4,13 @@
 #
 Name     : R-ape
 Version  : 5.2
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/ape_5.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ape_5.2.tar.gz
 Summary  : Analyses of Phylogenetics and Evolution
 Group    : Development/Tools
 License  : GPL-2.0 GPL-2.0+
-Requires: R-ape-lib
-Requires: R-Rcpp
+Requires: R-ape-lib = %{version}-%{release}
 BuildRequires : R-Rcpp
 BuildRequires : buildreq-R
 
@@ -34,11 +33,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538186980
+export SOURCE_DATE_EPOCH=1552711529
 
 %install
+export SOURCE_DATE_EPOCH=1552711529
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1538186980
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,8 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library ape|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  ape || :
 
 
 %files
@@ -122,7 +120,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/ape/help/paths.rds
 /usr/lib64/R/library/ape/html/00Index.html
 /usr/lib64/R/library/ape/html/R.css
-/usr/lib64/R/library/ape/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
