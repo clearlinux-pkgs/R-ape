@@ -4,7 +4,7 @@
 #
 Name     : R-ape
 Version  : 5.6
-Release  : 45
+Release  : 46
 URL      : https://cran.r-project.org/src/contrib/ape_5.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ape_5.6.tar.gz
 Summary  : Analyses of Phylogenetics and Evolution
