@@ -2,10 +2,12 @@
 R-RNeXML
 R-adegenet
 R-adephylo
+R-data.tree
 R-geiger
 R-phangorn
 R-phylobase
 R-phylogram
 R-phytools
+R-rncl
 R-rotl
 R-taxize
