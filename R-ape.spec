@@ -4,7 +4,7 @@
 #
 Name     : R-ape
 Version  : 5.7.1
-Release  : 58
+Release  : 59
 URL      : https://cran.r-project.org/src/contrib/ape_5.7-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ape_5.7-1.tar.gz
 Summary  : Analyses of Phylogenetics and Evolution
@@ -17,9 +17,6 @@ Requires: R-digest
 BuildRequires : R-Rcpp
 BuildRequires : R-digest
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 # ape
@@ -52,10 +49,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1678723690
+export SOURCE_DATE_EPOCH=1678810837
 
 %install
-export SOURCE_DATE_EPOCH=1678723690
+export SOURCE_DATE_EPOCH=1678810837
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-ape
 cp %{_builddir}/ape/COPYING %{buildroot}/usr/share/package-licenses/R-ape/b47456e2c1f38c40346ff00db976a2badf36b5e3 || :
